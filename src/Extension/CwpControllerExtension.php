@@ -121,10 +121,6 @@ class CwpControllerExtension extends Extension implements PermissionProvider
             if (!$member->validateAutoLoginToken($_REQUEST['t'])) {
                 $member = null;
             }
-        } elseif ($this->owner->getRequest()->getSession()->get('AutoLoginHash')) {
-            $member = Member::member_from_autologinhash(
-                $this->owner->getRequest()->getSession()->get('AutoLoginHash')
-            );
         } else {
             $member = Security::getCurrentUser();
         }
