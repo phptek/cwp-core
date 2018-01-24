@@ -36,7 +36,8 @@ class LoginAttemptNotifications extends Extension
         $session = $this->owner->getRequest()->getSession();
 
         Requirements::javascript('cwp/cwp-core:javascript/LoginAttemptNotifications.js');
-        $sessionLastVisited = $session->get('LoginAttemptNotifications.SessionLastVisited');
+        //$sessionLastVisited = $session->get('LoginAttemptNotifications.SessionLastVisited');
+        $sessionLastVisited = '2018-01-25 06:24:10';
         if ($sessionLastVisited) {
             // Session already in progress. Show all attempts since the session was last visited.
 
